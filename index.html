@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purin Cute Expense Tracker</title>
+<meta name="description" content="Purin Cute Expense Tracker — a cute, private Android app for recording what you spend, by day, month, category and payment source.">
+<style>
+  /* Same palette and font stack as privacy.html and terms.html, so the pages read as one
+     site rather than several. */
+  :root {
+    --bg: #fff7fa;
+    --fg: #3a1e2a;
+    --muted: #7a5463;
+    --rule: #f5cedd;
+    --accent: #c2256a;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1216;
+      --fg: #f4e6ec;
+      --muted: #b799a6;
+      --rule: #3a2730;
+      --accent: #f48fb1;
+      --on-accent: #1b1216;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 4rem 1.25rem 3rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  }
+  /* Prose is left-aligned so each line is easy to track back to its start;
+     only the title and the button are centred. */
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 1.5rem; letter-spacing: -.02em; text-align: center; }
+  /* The section headings are set in capitals, so the size does the separating:
+     caps at body size read as shouting, caps at this size read as a heading. */
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    letter-spacing: .02em;
+    margin: 2.75rem 0 .75rem;
+  }
+  p { margin: 0 0 1rem; }
+  .lead { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .6rem; }
+  li b { font-weight: 600; }
+  a { color: var(--accent); }
+  .cta { margin-top: 3.5rem; text-align: center; }
+  .btn {
+    display: block;
+    background: var(--accent);
+    color: var(--on-accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    /* Padding rather than a fixed height, so the target grows with the text at
+       larger accessibility sizes instead of clipping it. */
+    padding: .85rem 1.5rem;
+    min-height: 44px;
+  }
+  .btn:hover { opacity: .9; }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  /* The button does nothing for a visitor with no mail client, and it fails
+     silently. This is the copyable way out of that. */
+  .fallback { color: var(--muted); font-size: .9rem; margin: 1rem 0 0; }
+  .note { color: var(--muted); font-size: .9rem; }
+  .mascot { display: block; width: 9rem; height: auto; margin: 0 auto 1rem; }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <img class="mascot" src="pudding.svg" alt="Purin, a smiling custard pudding on a plate" width="873" height="665">
+  <h1>Purin Cute Expense Tracker</h1>
+
+  <p class="lead">A cute, private way to keep track of what you spend, with a
+  smiling pudding and a sticker for everything.</p>
+
+  <h2>ADD AN EXPENSE IN FOUR TAPS</h2>
+  <ul>
+    <li><b>How much?</b> Type the amount on a built-in calculator, so you can
+    add up a receipt or split a bill as you go.</li>
+    <li><b>What for?</b> Pick a category, each with its own sticker. Your most
+    recent ones come first.</li>
+    <li><b>Paid with?</b> Cash, card, bank transfer, e-wallet, or a source you
+    name yourself.</li>
+    <li><b>When?</b> Today by default, or any other day, with an optional
+    note.</li>
+  </ul>
+
+  <h2>SEE WHERE IT WENT</h2>
+  <ul>
+    <li><b>By day and by month,</b> with a total for each.</li>
+    <li><b>By category,</b> with a pie chart and each category’s share, for a
+    month, a period you choose, or all time.</li>
+    <li><b>By source,</b> so you can see what went on each card or in cash.</li>
+    <li><b>Search</b> by note, category, source, amount or date.</li>
+  </ul>
+
+  <h2>MORE THAN ONE CURRENCY</h2>
+  <p>Every expense keeps its own currency. Totals are shown separately for each
+  currency and are never added together or converted, so the numbers are always
+  exactly what you spent.</p>
+
+  <h2>MAKE IT YOURS</h2>
+  <ul>
+    <li>Rename categories and payment sources, or combine two into one.</li>
+    <li>A daily reminder to record the day’s spending, at a time you pick.</li>
+    <li>Lock the app with a password, and unlock with your fingerprint.</li>
+    <li>Export everything to a file, and import it again on another phone.</li>
+  </ul>
+
+  <h2>PRIVATE BY DESIGN</h2>
+  <p>No account, no ads and no tracking. Your expenses are stored on your phone
+  and are never sent to us. The app only goes online for Google Play, when you
+  choose to buy the optional Purin Club membership.</p>
+
+  <h2>PURIN CLUB</h2>
+  <p>The app is free to use. Purin Club is an optional one-time purchase that
+  gives you a membership card with your own member number. It is not needed
+  for any of the tracking features.</p>
+
+  <div class="cta">
+    <a class="btn" href="mailto:hello@purin-expense-tracker.com?subject=Purin%20feedback">Send feedback</a>
+
+    <p class="fallback">Or write to
+    <a href="mailto:hello@purin-expense-tracker.com">hello@purin-expense-tracker.com</a></p>
+  </div>
+
+  <footer><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></footer>
+
+</main>
+</body>
+</html>
